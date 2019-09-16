@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutAll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WriteActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/layoutWriteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="#a0a1a5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/ivWriteClose"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_close_black_24dp"
+                android:tint="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="WRITE"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/ivWriteSave"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_save_black_24dp"
+                android:tint="@android:color/white" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutWriteTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="72dp"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp">
+
+                <ImageView
+                    android:id="@+id/ivTime"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/ic_access_time_black_24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:focusedByDefault="false"
+                    android:gravity="center"
+                    android:text="2019년 5월 2일 목요일"
+                    android:textColor="@color/myDarkGrey"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivTime"
+                    app:layout_constraintStart_toEndOf="@+id/ivTime"
+                    app:layout_constraintTop_toTopOf="@+id/ivTime" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="36dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="am 11:50"
+                    android:textColor="@color/myDarkGrey"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvDate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvDate" />
+
+<!--                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginRight="24dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TimePicker
+                        android:id="@+id/tPicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:timePickerMode="spinner"
+                        android:visibility="gone"></TimePicker>
+
+                    <FrameLayout
+                        android:id="@+id/calViewFreme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <CalendarView
+                            android:id="@+id/calView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></CalendarView>
+                    </FrameLayout>
+
+                </LinearLayout>-->
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <View style="@style/Devider" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutWriteMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="72dp"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivMenu"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/ic_local_dining_black_24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edtMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="72dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="먹은 것들"
+                    android:singleLine="true"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivMenu"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivMenu" />
+
+
+                <ImageButton
+                    android:id="@+id/ivMenuDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="36dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_check_black_24dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivMenu"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivMenu" />
+
+
+                <ListView
+                    android:id="@+id/listMenuItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginRight="36dp"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:scrollbars="none"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivMenu"></ListView>
+            </android.support.constraint.ConstraintLayout>
+
+            <View style="@style/Devider" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutWriteType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="72dp"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp">
+
+                <ImageView
+                    android:id="@+id/ivType"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_title_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/breakfast"
+                    android:textColor="@color/myDarkGrey"
+                    android:textSize="14dp"
+                    android:focusableInTouchMode="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivType"
+                    app:layout_constraintStart_toEndOf="@+id/ivType"
+                    app:layout_constraintTop_toTopOf="@+id/ivType" />
+
+                <!--<Spinner
+                    android:id="@+id/spnType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivType"
+                    app:layout_constraintStart_toEndOf="@+id/ivType"
+                    app:layout_constraintTop_toTopOf="@+id/ivType"
+                    tools:ignore="MissingConstraints"></Spinner>-->
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View style="@style/Devider" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutWriteRemove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="72dp"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp">
+
+                <ImageView
+                    android:id="@+id/ivRemove"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_sentiment_dissatisfied_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edtRemove"
+                    android:layout_width="0dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:focusedByDefault="false"
+                    android:hint="제거행동을 입력해주세요"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/myDarkGrey"
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivRemove"
+                    app:layout_constraintStart_toEndOf="@+id/ivRemove"
+                    app:layout_constraintTop_toTopOf="@+id/ivRemove"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tvRemove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="제거행동 없음"
+                    android:textColor="@color/myDarkGrey"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivRemove"
+                    app:layout_constraintStart_toEndOf="@+id/ivRemove"
+                    app:layout_constraintTop_toTopOf="@+id/ivRemove" />
+
+                <CheckBox
+                    android:id="@+id/cbRemove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="36dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivRemove"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivRemove" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View style="@style/Devider" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutWriteLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="72dp"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp">
+
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_location_on_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edtLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="72dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="먹은 장소"
+                    android:singleLine="true"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivLocation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivLocation" />
+
+                <TextView
+                    android:id="@+id/tvLocationMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="36dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="지도에서 추가하기"
+                    android:textColor="@color/myDarkGrey"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtLocation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edtLocation" />
+
+
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View style="@style/Devider" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutWritePeople"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="72dp"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivPeople"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/ic_person_black_24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/edtPeople"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="72dp"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:ems="10"
+                    android:focusedByDefault="false"
+                    android:hint="함께 먹은 사람"
+                    android:singleLine="true"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivPeople"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivPeople" />
+
+                <ImageButton
+                    android:id="@+id/ivPeopleDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="36dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_check_black_24dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivPeople"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivPeople" />
+
+                <ListView
+                    android:id="@+id/listViewPeople"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginRight="36dp"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:scrollbars="none"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivPeople"></ListView>
+            </android.support.constraint.ConstraintLayout>
+
+            <View style="@style/Devider" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutWriteThink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="72dp"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp">
+
+                <ImageView
+                    android:id="@+id/ivThink"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/ic_favorite_black_24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <EditText
+                    android:id="@+id/edtThink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginRight="36dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:focusedByDefault="false"
+                    android:hint="느낌·생각"
+                    android:textColor="@color/myDarkGrey"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View style="@style/Devider" />
+
+            <LinearLayout
+                android:id="@+id/layoutWritePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="72dp"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp">
+
+                <ImageView
+                    android:id="@+id/ivPhoto"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/ic_insert_photo_black_24dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="24dp"
+                    android:paddingRight="36dp">
+
+                    <TextView
+                        android:id="@+id/tvPhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:text="사진 첨부"
+                        android:textColor="@color/myDarkGrey"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:id="@+id/photoPicLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ivMenuPhoto"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="24dp"
+                            android:scaleType="fitStart"
+                            app:layout_constraintStart_toEndOf="@+id/ivPhoto"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/ivPhotoDel"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_close_black_24dp" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/place_autocomplete_fragment"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

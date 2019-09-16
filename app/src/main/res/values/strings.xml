@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">RecoveryDiary</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- <string name="google_maps_key">AIzaSyD4EWabHEahTVT4HprQzXQrw0q9sSrHF1A</string>-->
+
+    <string-array name="days_array">
+        <item>MON</item>
+        <item>TUE</item>
+        <item>WED</item>
+        <item>THU</item>
+        <item>FRI</item>
+        <item>SAT</item>
+        <item>SUN</item>
+    </string-array>
+
+    <string name="challange_check_title_positive">성공!축하해요!</string>
+    <string name="challange_check_title_negative">수고했어요!다음번엔 더 화이팅!</string>
+
+    <string name="vomit">제거행동</string>
+    <string name="no_vomit_meal">제거행동 없는 식사</string>
+    <string name="no_vomit_day">제거행동 없는 날</string>
+    <string name="good_breakfast">아침식사</string>
+    <string name="good_lunch">점심식사</string>
+    <string name="good_dinner">저녁식사</string>
+    <string name="good_snack">간식</string>
+
+    <string name="etc">기타</string>
+
+    <string name="breakfast">아침식사</string>
+    <string name="lunch">점심식사</string>
+    <string name="dinner">저녁식사</string>
+    <string name="snack">간식</string>
+
+    <string name="option_get_place">Get place</string>
+</resources>

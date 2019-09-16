@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChallangeActivity">
+
+
+   <!-- <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+
+
+            <LinearLayout
+                android:id="@+id/layoutChallange"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:clickable="true">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:background="@color/myLightMetal">
+
+
+                        <ImageButton
+                            android:id="@+id/arrowCMleft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_left" />
+
+                        <TextView
+                            android:id="@+id/tvCMStatusTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingHorizontal="8dp"
+                            android:text="ING"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/arrowCMRight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_right" />
+                    </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/tvCMRecyclerNone"
+                            android:text="진행중인 도전 내용이 없습니다."
+                            android:layout_marginVertical="8dp"
+                            android:gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerViewCM"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:overScrollMode="never">
+                        </android.support.v7.widget.RecyclerView>
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/titleTapWait"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:background="@color/myLightMetal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:padding="8dp"
+                            android:text="WAIT"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/arrow_Wait"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/recyclerWaitOnOff"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvRecyclerWaitNone"
+                            android:text="시작되지 않은 도전 내용이 없습니다."
+                            android:layout_marginVertical="8dp"
+                            android:gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerView_chl_Wait"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+
+                </LinearLayout>-->
+
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/titleTapDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:background="@color/myLightMetal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:padding="8dp"
+                            android:text="DONE"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/arrow_Done"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/recyclerDoneOnOff"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvRecyclerDoneNone"
+                            android:text="완료된 도전 내용이 없습니다."
+                            android:layout_marginVertical="8dp"
+                            android:gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerView_chl_Done"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+                </LinearLayout>
+-->
+
+            </LinearLayout>
+
+
+    <!--</ScrollView>-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/flb_AddChallange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/myGreen"
+        android:src="@drawable/ic_add_floating_big" />
+
+</FrameLayout>

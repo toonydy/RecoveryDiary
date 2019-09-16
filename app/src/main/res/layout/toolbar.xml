@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/myDarkGrey">
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar_verMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+       <RelativeLayout
+
+            android:layout_marginRight="70dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/ivPreMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_left_black_24dp"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:tint="@android:color/white"
+                android:layout_toLeftOf="@+id/tvMonthText"
+                android:layout_marginRight="16dp"/>
+            <ImageButton
+                android:id="@+id/ivNextMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_right_black_24dp"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:tint="@android:color/white"
+                android:layout_toRightOf="@+id/tvMonthText"
+                android:layout_marginLeft="16dp"/>
+            <TextView
+                android:id="@+id/tvYearText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvMonthText"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"/>
+            <TextView
+                android:id="@+id/tvMonthText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="TEXTMONTH"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+       </RelativeLayout>
+           <ImageButton
+               android:id="@+id/ivRefreshCal"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_replay_white_24dp"
+               android:background="@android:color/transparent"
+               android:layout_marginRight="16dp"
+               android:layout_centerVertical="true"
+               android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/toolbar_verDaily"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginRight="70dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/ivPrevDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_left_black_24dp"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:tint="@android:color/white"
+            android:layout_toLeftOf="@+id/tvDaily"
+            android:layout_marginRight="16dp"/>
+        <ImageButton
+            android:id="@+id/ivNextDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_right_black_24dp"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:tint="@android:color/white"
+            android:layout_toRightOf="@+id/tvDaily"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:id="@+id/tvDaily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="DAILY"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/ivDailytoMainCal"
+            android:layout_marginRight="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_date_range_black_24dp"
+            android:tint="@android:color/white"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+        <!--<ImageButton
+            android:id="@+id/ivDailyAdd"
+            android:layout_marginRight="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_circle_white_24dp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/toolbar_verChallange"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="70dp">
+
+        <TextView
+            android:id="@+id/tvChallangeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="CHALLANGE"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/ivChallangetoMainCal"
+            android:layout_marginRight="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_date_range_black_24dp"
+            android:tint="@android:color/white"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+<!--        <ImageButton
+            android:layout_marginRight="16dp"
+            android:id="@+id/ivChallangeAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_circle_white_24dp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/toolbar_verGraph"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="70dp">
+
+            <TextView
+                android:id="@+id/tvGraphText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="GRAPH"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/ivGraphtoMainCal"
+            android:layout_marginRight="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_date_range_black_24dp"
+            android:tint="@android:color/white"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

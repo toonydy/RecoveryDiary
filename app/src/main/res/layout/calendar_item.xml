@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/ivItemGridView"
+        android:layout_gravity="center"
+        android:layout_marginTop="-10dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:tint="#57ac85"
+        android:src="@drawable/ic_brightness_1_black_24dp" />
+
+    <ImageView
+        android:id="@+id/ivItemGridViewChecked"
+        android:layout_gravity="center"
+        android:layout_marginTop="-10dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:visibility="invisible"
+        android:tint="@color/myDarkGrey"
+        android:src="@drawable/ic_panorama_fish_eye_black_24dp" />
+
+    <TextView
+        android:id="@+id/tvItemGridView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center" />
+</FrameLayout>

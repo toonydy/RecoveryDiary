@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/drawer_menu_main"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_main"
+            android:checked="true"
+            android:icon="@drawable/ic_date_range_black_24dp"
+            android:title="MAIN" />
+        <item
+            android:id="@+id/drawer_challange"
+            android:icon="@drawable/ic_redeem_black_24dp"
+            android:title="CHALLANGE" />
+
+        <item
+            android:id="@+id/drawer_graph"
+            android:icon="@drawable/ic_trending_up_black_24dp"
+            android:title="GRAPH" />
+    </group>
+
+    <group
+        android:id="@+id/drawer_menu_sub"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/drawer_print"
+            android:icon="@drawable/ic_print_black_24dp"
+            android:title="PRINT" />
+
+        <item
+            android:id="@+id/drawer_setting"
+            android:title="CONTACT" />
+
+    </group>
+</menu>

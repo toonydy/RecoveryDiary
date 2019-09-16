@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    tools:context=".CalendarFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <!-- <ImageView
+            android:id="@+id/calBackPaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fullback"
+            android:scaleType="fitStart"
+            />-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/calBackPaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"></LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <GridView
+                android:id="@+id/calendar_days_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center_horizontal"
+                android:horizontalSpacing="1dp"
+                android:numColumns="7"
+                android:stretchMode="columnWidth" />
+
+            <ViewFlipper
+                android:id="@+id/calendar_switcher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/calendar_grid"
+                android:scrollbars="none"
+                tools:ignore="NotSibling">
+
+                <GridView
+                    android:id="@+id/calendar_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center_horizontal"
+                    android:numColumns="7"
+                    android:scrollbars="none"></GridView>
+            </ViewFlipper>
+
+        </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btnAddinCal"
+        android:paddingBottom="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/circleadd" />
+
+    </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

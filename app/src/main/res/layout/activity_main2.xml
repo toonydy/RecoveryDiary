@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Main2Activity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/backgrid"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                android:orientation="vertical">
+
+
+                <fragment
+                    android:id="@+id/fragment"
+                    android:name="com.example.yeodayeong.recoverydiary.CalendarFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true">
+
+               <!-- 타임라인 이미지 리사이클러-->
+                <android.support.v7.widget.RecyclerView
+
+                    android:scrollbars="none"
+                    android:clickable="true"
+                    android:id="@+id/detailRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        <!--        <LinearLayout
+                    android:id="@+id/layoutDetailAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="4dp"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageButton
+                            android:id="@+id/ivTmpDayPrev"
+                            android:layout_width="wrap_content"
+                            android:layout_height="12dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_left" />
+
+                        <TextView
+                            android:id="@+id/tvDateDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-1dp"
+                            android:text="2019년 5월 13일 월요일"
+                            android:textSize="16dp" />
+
+                        <ImageButton
+                            android:id="@+id/ivTmpDayNext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="12dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_right" />
+                    </LinearLayout>
+
+
+               &lt;!&ndash;     <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        &lt;!&ndash;여기에 새로 작성&ndash;&gt;
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerCalDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+                    </FrameLayout>&ndash;&gt;
+
+
+                    &lt;!&ndash;날짜 아래 디테일란 프레임으로 있는지 없는지&ndash;&gt;
+                    <FrameLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/layoutDetailNone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#d6d1cd"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="일기를 작성해주세요." />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:alpha="0.6"
+                        android:background="#d6d1cd"
+                        android:clickable="true"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:src="@drawable/ic_local_dining_main_24dp" />
+
+                            <TextView
+                                android:id="@+id/tvMealNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:src="@drawable/ic_snack_main_24dp" />
+
+                            <TextView
+                                android:id="@+id/tvSnackNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:src="@drawable/ic_sentiment_main_24dp" />
+
+                            <TextView
+                                android:id="@+id/tvRemoveNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1" />
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                  </FrameLayout>
+
+                </LinearLayout>-->
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+<!--        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/flb_main_Write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/myGreen"
+            android:src="@drawable/ic_add_floating_big" />-->
+
+    </FrameLayout>
+
+
+</LinearLayout>
